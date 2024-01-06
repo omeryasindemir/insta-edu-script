@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "node-webcam": "^0.8.2",
+    "uuid": "^9.0.1"
   }
 }
